@@ -30,9 +30,7 @@ public class TrainController {
         //We need to return the trainId of the newly added train
         Integer trainId = trainService.addTrain(train);
         return trainId;
-
     }
-
     @GetMapping("/calculate-avaiable-seats")
     public Integer checkSeatAvailability(@RequestBody SeatAvailabilityEntryDto seatAvailabilityEntryDto){
         Integer count = trainService.calculateAvailableSeats(seatAvailabilityEntryDto);
